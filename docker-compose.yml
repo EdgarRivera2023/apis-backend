@@ -1,0 +1,25 @@
+# This file tells Docker Compose how to set up our development environment
+
+services: # This is where we define the services (containers) we want to run
+  
+  postgres: # We're naming our database service 'postgres'
+    image: postgres:15-alpine # Use the official PostgreSQL version 15 image
+    container_name: apis_postgres_db # A custom name for our container
+    restart: always # Always restart the container if it stops
+    
+    environment: # These are the settings for our new database
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: apis_dev_db
+      
+    ports:
+      # This maps port 5432 inside the container to port 5432 on your PC
+      - "5432:5432"
+      
+    volumes:
+      # This creates a persistent storage volume so your data isn't lost
+      # when the container restarts.
+      - postgres_data:/var/lib/postgresql/data
+
+volumes: # Defines the persistent volume we referenced above
+  postgres_data:
