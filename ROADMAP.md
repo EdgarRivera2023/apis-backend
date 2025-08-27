@@ -19,13 +19,13 @@ This phase involved designing the application architecture, setting up the devel
 
 This phase focuses on building the core infrastructure of the API, including the database connection and the essential user authentication system.
 
-- [ ] **Connect to Database:**
+- [X] **Connect to Database:**
     - [X] Create the PostgreSQL database instance using Docker.
-    - [ ] Write the database connection logic in the Node.js application.
-    - [ ] Test the connection to ensure the API can communicate with the database.
-- [ ] **Create Core Database Tables (Migrations):**
-    - [ ] Set up a migration tool (e.g., Knex.js).
-    - [ ] Write the first migration for `Companies`, `Contacts`, and `Users` tables.
+    - [X] Write the database connection logic in the Node.js application.
+    - [X] Test the connection to ensure the API can communicate with the database.
+- [X] **Create Core Database Tables (Migrations):**
+    - [X] Set up a migration tool (e.g., Knex.js).
+    - [X] Write the first migration for `Companies`, `Contacts`, and `Users` tables.
 - [ ] **Build User Registration Endpoint:**
     - [ ] Create the API route (`POST /api/auth/register`).
     - [ ] Implement input validation.
